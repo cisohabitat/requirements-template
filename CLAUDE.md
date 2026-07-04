@@ -13,9 +13,22 @@ A reusable requirements-engineering template — no application code. It is copi
 - **Preserve traceability.** Every document's frontmatter `source` field must cite upstream IDs. After creating or changing the status/references of any FR/NFR, run `python tools/reqs.py matrix` — the matrix is generated; never edit between its markers. Run `python tools/reqs.py check` before considering requirements work done; errors (broken refs, orphans) must be fixed.
 - **Significant decisions get a DEC file.** Scope cuts, channel/platform choices, priority overrides, definition conflicts → `05-decision-log/`, created when the decision is made, with the affected documents updated in the same change. Decisions are superseded by new DECs, never edited after approval.
 - **Glossary discipline.** A domain term used in any requirement must have an `agreed` row in `00-project/glossary.md`; add ambiguous terms as `proposed` the moment they surface.
-- **Worked examples** at the bottom of each template and living doc (marked "delete on real projects") share one consistent scenario: STK-001 → TRN-001 → US-001 → UJ-001 → FR-001/NFR-001 → DEC-001. If you edit an example, keep the IDs consistent across all templates, the matrix, and the `00-project/` docs.
+- **Worked examples** at the bottom of each template and living doc (marked "delete on real projects") share one consistent scenario: STK-001 → TRN-001 → US-001 → UJ-001 → FR-001/NFR-001 → DEC-001. If you edit an example, keep the IDs consistent across all templates, the matrix, and the `00-project/` docs. When doing real project work while `*(example — delete)*` rows still exist in living docs, flag that the examples haven't been cleaned out and update/replace those rows rather than adding duplicates.
 - **Requirements are atomic and testable.** One requirement per file; no "and" in the requirement sentence; quantify anything vague ("fast", "secure"). NFRs need a measurable target and verification method.
 - **Frontmatter `status`** is the lifecycle: `draft | reviewed | approved | deprecated`. Don't delete documents — deprecate them.
+
+## Skills
+
+Prefer these skills (in `.claude/skills/`) over improvising the equivalent workflow:
+
+| Task | Skill |
+|---|---|
+| Create any document (story, requirement, transcript, journey, decision) | `/new-doc` |
+| Turn a transcript into draft stories and candidate NFRs | `/extract-stories` |
+| Build or refresh the system design brief | `/assemble-brief` |
+| Prepare questions and an agenda for an elicitation session | `/prep-session` |
+
+All of them delegate ID assignment and scaffolding to `python tools/reqs.py` — never hand-assign IDs.
 
 ## When asked to fill in the template for a project
 
