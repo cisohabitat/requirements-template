@@ -13,9 +13,15 @@ It answers the two questions that kill projects when unanswerable:
 
 ## How to maintain it
 
-- Add a row **when a requirement is created**, not at the end of the project — reconstruction after the fact is unreliable.
-- One row per FR/NFR. A requirement sourced from several stories gets the stories listed in one cell.
-- Update the `Status` column whenever the requirement's frontmatter `status` changes; update `Design brief §` once the system design brief is assembled.
-- Orphans are findings, not formatting problems: a transcript takeaway with no story, or a requirement with no source, means elicitation or analysis is incomplete.
+The matrix is **generated from document frontmatter** — run:
 
-This is a **living document** — unlike the `TEMPLATE-` files, you edit `traceability-matrix.md` directly.
+```
+python tools/reqs.py matrix
+```
+
+after creating any requirement or changing a document's `status`, `source`, or other reference fields. It can never drift from the documents, because the documents are the only input. (See `../tools/README.md` for details and for `check`, the validation-only variant.)
+
+- Never edit between the `BEGIN/END GENERATED` markers — fix the source documents and regenerate.
+- The chain is resolved transitively: an NFR that cites `applies_to: [FR-001]` inherits FR-001's transcripts, stories, and journeys.
+- The `Design brief §` column fills itself once an assembled brief exists in `07-system-design-brief/` and mentions the requirement IDs.
+- Orphans are findings, not formatting problems: a requirement with no source means elicitation or analysis is incomplete — `check` reports it as an error.

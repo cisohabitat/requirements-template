@@ -75,7 +75,17 @@ Type-specific fields (e.g. `priority`, `source`, `deciders`) are defined in each
 - Every user story cites the transcript(s) it came from.
 - Every requirement cites the story/journey it supports.
 - Decisions cite their evidence and list the documents they affect.
-- `06-traceability/traceability-matrix.md` holds the full chain — update it whenever a document is added or its status changes.
+- `06-traceability/traceability-matrix.md` holds the full chain — **generated** from frontmatter by `python tools/reqs.py matrix`; rerun it whenever a document is added or its status changes.
+
+## Tooling
+
+`tools/reqs.py` (Python 3.9+, no packages needed) does the mechanical work — see `tools/README.md`:
+
+```
+python tools/reqs.py new story "Password reset"   # scaffold with the next free ID
+python tools/reqs.py matrix                       # regenerate the traceability matrix
+python tools/reqs.py check                        # validate IDs, references, coverage
+```
 
 ## Getting Started on a New Project
 
@@ -83,5 +93,5 @@ Type-specific fields (e.g. `priority`, `source`, `deciders`) are defined in each
 2. Draft `00-project/vision-and-scope.md` and seed the stakeholder register — even a rough version steers elicitation.
 3. Plan each session with `01-transcripts/elicitation-aids/TEMPLATE-session-plan.md` (the question bank is there too); record it from `01-transcripts/TEMPLATE-transcript.md`.
 4. Extract stories and journeys; derive requirements; log significant decisions in `05-decision-log/` as they happen.
-5. Keep the traceability matrix current as you go — it is much harder to reconstruct later.
+5. Run `python tools/reqs.py matrix` after every requirement change so the traceability matrix stays current.
 6. When requirements stabilise, assemble the system design brief from `07-system-design-brief/TEMPLATE-system-design-brief.md`.
