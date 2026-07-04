@@ -1,4 +1,4 @@
-# 04 — Traceability
+# 06 — Traceability
 
 The traceability matrix (`traceability-matrix.md`) is the single place where the whole chain is visible:
 

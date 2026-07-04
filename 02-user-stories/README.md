@@ -1,10 +1,10 @@
-# 01 — User Stories
+# 02 — User Stories
 
-One file per user story, distilled from the transcripts in `00-transcripts/`.
+One file per user story, distilled from the transcripts in `01-transcripts/`.
 
 ## When to create one
 
-After reviewing a session record, turn each candidate requirement that describes **user-visible behaviour** into a story. (Purely technical or quality constraints go straight to `03-requirements/non-functional/`.)
+After reviewing a session record, turn each candidate requirement that describes **user-visible behaviour** into a story. (Purely technical or quality constraints go straight to `04-requirements/non-functional/`.)
 
 ## Naming
 

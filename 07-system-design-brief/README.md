@@ -1,4 +1,4 @@
-# 05 — System Design Brief
+# 07 — System Design Brief
 
 The consolidation point: one document that pulls the transcripts, stories, journeys, requirements, and traceability together into the **input for system design**. An architect or design team should be able to work from this document alone, following ID references back to source files only when they need depth.
 
@@ -12,6 +12,6 @@ Copy `TEMPLATE-system-design-brief.md` to `<project-name>-design-brief.md` and f
 
 ## Principles
 
-- **Reference, don't duplicate.** Summarise requirements in tables of IDs and one-line titles; the detail lives in `03-requirements/`. Duplicated text goes stale.
+- **Reference, don't duplicate.** Summarise requirements in tables of IDs and one-line titles; the detail lives in `04-requirements/`. Duplicated text goes stale.
 - **Include the negative space.** Out-of-scope decisions and open questions are as valuable to a designer as the requirements themselves.
 - **It's a snapshot.** Stamp the date and the matrix version it was assembled from; regenerate rather than patch if requirements move underneath it.

@@ -1,4 +1,4 @@
-# 02 — User Journeys
+# 03 — User Journeys
 
 One file per end-to-end journey a persona takes to reach a goal. Journeys give context that individual stories lack: the sequence of touchpoints, the pain points, and where the opportunities are.
 

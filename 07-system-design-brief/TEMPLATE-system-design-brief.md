@@ -16,7 +16,7 @@ assembled_from: traceability-matrix.md as of YYYY-MM-DD
 
 ## 2. Personas & Journeys
 
-<!-- One row per journey; detail lives in 02-user-journeys/. -->
+<!-- One row per journey; detail lives in 03-user-journeys/. -->
 
 | Journey | Persona | Goal | Key pain points |
 |---|---|---|---|
@@ -69,11 +69,13 @@ assembled_from: traceability-matrix.md as of YYYY-MM-DD
 
 ## Appendix — Sources
 
-- Transcripts: `../00-transcripts/` (TRN-0xx …)
-- User stories: `../01-user-stories/` (US-0xx …)
-- User journeys: `../02-user-journeys/` (UJ-0xx …)
-- Requirements: `../03-requirements/` (FR-0xx, NFR-0xx …)
-- Traceability: `../04-traceability/traceability-matrix.md`
+- Project vision, stakeholders, glossary: `../00-project/`
+- Transcripts: `../01-transcripts/` (TRN-0xx …)
+- User stories: `../02-user-stories/` (US-0xx …)
+- User journeys: `../03-user-journeys/` (UJ-0xx …)
+- Requirements: `../04-requirements/` (FR-0xx, NFR-0xx …)
+- Decisions: `../05-decision-log/` (DEC-0xx …)
+- Traceability: `../06-traceability/traceability-matrix.md`
 
 ---
 ---
